@@ -1,0 +1,16 @@
+@model List<Piraña>
+
+<h1>Lista de Productos</h1>
+
+@if (Model.Count == 0) {
+    <div class="alert alert-warning text-center">Aún no hay Productos.</div>
+} else {
+    <ol>
+    @foreach (var p in Model) {
+        <li class="d-flex">
+            <div><img src="@p.Foto" /></div>
+            <div>@p.Nombre</div>
+        </li>
+    }
+    </ol>
+}
